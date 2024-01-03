@@ -1,0 +1,129 @@
+<header class="header"  >
+  <div class="navigation-bar" >
+    <div class="time-date">
+      <p><span id="current-date">&nbsp;&nbsp;&nbsp;{{ currentDate }}</span> &nbsp;|
+      <span id="current-time">{{ currentTime }}</span></p>
+    </div>
+    <div class="logout-button">
+      <button class="logout-button" (click)="logout()">Logout</button>
+    </div>
+  </div>
+
+  <div class="content-bar">
+    <div class="national-emblem">
+      &nbsp; &nbsp; <img src="assets/emblem.png" alt="National Emblem Logo">
+    </div>
+    <div class="passport-seva">
+      <h2>Passport Seva</h2>
+      <p>Passport verification & registration</p>
+    </div>
+    <div class="right-logo">
+      <img src="assets/passportSeva.png" alt="Passport Seva Logo">
+    </div>
+  </div>
+  <div class="more-nav">
+    <a routerLink="/Homepage" class="nav-link button-link">Home</a>
+    <button (click)="goToFormPage()" class="nav-link button-link form-button">Verification</button>
+    <a routerLink="/contact" class="nav-link button-link">Contact</a>
+    <a routerLink="/fetchdetails" class="nav-link button-link">Fetch Passport</a>
+
+  </div>
+  
+  
+<div class="latest-news">
+  <marquee behavior="scroll" direction="left" scrollamount="8">
+    <!-- Your latest news content goes here -->
+    <span>Cyclone Miachaung Alert: Nellore has been closed at RPO Vijayawada and some PSK/POPSK have been closed at RPO Chennai. Refer to the respective RPO pages for more details</span>
+  </marquee>
+</div>
+</header><br><br><br><br><br><br>
+
+
+
+<div class="login-container">
+  <body style="background-image: url('./assets/login2(copy1).jpg'); background-size: cover;margin-top: 30px; background-repeat: repeat;width: 100%; height: 105%;">
+    <div style="background-color: rgba(221, 211, 211, 0.521);height: 636px; /* Adjust opacity by changing the last value */">
+  
+  <div class="container">
+    <!-- <div style="background-color: rgba(221, 211, 211, 0.8); height: 636px;"> -->
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form [formGroup]="passportForm" (ngSubmit)="fetchPassportDetails()">
+          <div class="form-group">
+            <label for="passportNumber" class="label-passport"><b>Passport Number:</b></label>
+            <input type="text" [(ngModel)]="passportNumber" formControlName="passportNumber">
+          </div>
+          <br>
+        
+          <div class="button-group">
+            <button type="submit" class="btn btn-primary">Fetch</button>
+            <button type="button" class="btn btn-secondary" (click)="resetForm()">Reset</button>
+          </div>
+        
+        
+     
+     <div *ngIf="errorMessage" style="color: red;">
+      {{ errorMessage }}
+    </div>
+   
+          
+
+         
+          <div *ngIf="passportDetails" class="passport-details" style="display: flex; border: 2px solid black;">
+            <!-- Left Side: Passport Document -->
+            <div style="flex: 1; padding: 10px; border-right: 1px solid black;">
+              <table style="width:100%; border-collapse: collapse;">
+                <tr>
+                  <td style="padding: 10px; border: 1px solid transparent;text-shadow: 0px 0px 0px #131363; color: #131363;">
+                    <b>Passport Document</b>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 5px; border: 1px solid transparent;">
+                    <img [src]="'data:image/png;base64,' + passportDetails.passportDocument" alt="Passport Document" style="width:100%; max-width: 400px;">
+                  </td>
+                </tr>
+              </table>
+              
+            </div>
+          
+            <!-- Right Side: Passport Details -->
+            <div style="flex: 1; padding: 10px;">
+              <table style="width:100%; border-collapse: collapse;">
+                <tr>
+                  <td colspan="3" style="padding: 10px; border: 1px solid transparent; text-shadow: 0px 0px 0px #131363; color: #131363;">
+                    <b>Passport Details</b>
+                  </td>
+                </tr>
+                <tr *ngFor="let field of fields">
+                  <td style="padding: 5px; border: 1px solid transparent; text-align: left;">
+                    <b>{{ field.label }}</b>
+                  </td>
+                  <td style="padding: 5px; border: 1px solid transparent; text-align: left;">
+                    :
+                  </td>
+                  <td style="padding: 5px; border: 1px solid transparent; text-align: left;">
+                    {{ passportDetails[field.key] }}
+                  </td>
+                </tr>
+              </table>
+              
+              
+              
+              
+              
+            </div>
+          </div>
+          
+
+          
+        </form>
+        
+      </div>
+      
+      <!-- </div> -->
+  </div>
+    </div>
+  </div>
+  </body>
+</div>

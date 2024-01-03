@@ -1,0 +1,103 @@
+<header class="header" fixed-top >
+  <div class="navigation-bar" >
+    <div class="time-date">
+      <p><span id="current-date">&nbsp;&nbsp;&nbsp;{{ currentDate }}</span> &nbsp;|
+      <span id="current-time">{{ currentTime }}</span></p>
+    </div>
+    <div class="logout-button">
+      <button class="logout-button" (click)="logout()">Logout</button>
+    </div>
+  </div>
+
+  <div class="content-bar">
+    <div class="national-emblem">
+      &nbsp; &nbsp; <img src="assets/emblem.png" alt="National Emblem Logo">
+    </div>
+    <div class="passport-seva">
+      <h2>Passport Seva</h2>
+      <p>Passport verification & registration</p>
+    </div>
+    <div class="right-logo">
+      <img src="assets/passportSeva.png" alt="Passport Seva Logo">
+    </div>
+  </div>
+  <div class="more-nav">
+    <a routerLink="/Homepage" class="nav-link button-link">Home</a>
+    <button (click)="goToFormPage()" class="nav-link button-link form-button">Verification</button>
+    <a routerLink="/contact" class="nav-link button-link">Contact</a>
+    <a routerLink="/fetchdetails" class="nav-link button-link">Fetch Passport</a>
+
+  </div>
+  
+  
+<div class="latest-news">
+  <marquee behavior="scroll" direction="left" scrollamount="8">
+    <!-- Your latest news content goes here -->
+    <span>Cyclone Miachaung Alert: Nellore has been closed at RPO Vijayawada and some PSK/POPSK have been closed at RPO Chennai. Refer to the respective RPO pages for more details</span>
+  </marquee>
+</div>
+</header><br> <br>
+<div id="main_1" class="slideshow-container">
+  <div class="mySlides fade">
+    <img src="assets/slide7.jpg" id="img1" alt="JAIPUR" style="height: 450px;">
+    <div class="text">
+    </div>
+  </div>
+
+  <div class="mySlides fade">
+
+    <img src="assets/slide2.jpg" id="img1" alt="JAIPUR" style="height: 450px;">
+    <div class="text">
+    </div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="assets/slide3.jpg" id="img1" alt="JAIPUR" style="height: 450px;">
+    <div class="text">
+    </div>
+  </div>
+  <div class="mySlides fade">
+    <img src="assets/slide4.jpg" id="img1" alt="JAIPUR" style="height: 450px;">
+    <div class="text">
+    </div>
+  </div>
+ 
+  <div class="mySlides fade">
+    <img src="assets/slide5.png" id="img1" style="height: 450px;">
+    <div class="text">
+    </div>
+  </div>
+  <div class="mySlides fade">
+    <img src="assets/slide8.jpg" id="img1" style="height: 450px;">
+    <div class="text">
+    </div>
+  </div>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>About Us</h3>
+      <p>Information about the Passport Seva app and its services.</p>
+    </div>
+    <div class="footer-section">
+      <h3>Help & Support</h3>
+      <p>Contact information and support options.</p>
+    </div>
+    <div class="footer-section">
+      <h3>Legal</h3>
+      <p>Legal information, terms of use, and privacy policy.</p>
+    </div>
+  </div>
+</footer>

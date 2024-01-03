@@ -1,0 +1,257 @@
+<app-shared-header></app-shared-header>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Passport Verification</title>
+ <!-- Link to your CSS file -->
+</head>
+
+<body style="background-image: url('./assets/login2(copy1).jpg'); background-size: cover;margin-top: -35px; background-repeat: repeat;width: 100%; height: 105%;">
+  <div style="background-color: rgba(255, 255, 255, 0.479); /* Adjust opacity by changing the last value */">
+
+  <h1 class="mat-display-1 center-text" style="color: rgba(27, 27, 141, 0.966); text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Passport Verification</h1>
+
+
+
+  <form (ngSubmit)="submitForm()" class="form-container">
+    <div class="grid-container">
+      <div class="form-column">
+        <div class="label-container">
+          <label for="firstName">First Name<span style="color: red">*</span></label><br>
+        </div>
+        <input type="text" id="firstName" name="firstName" [(ngModel)]="passportDetails.firstName"
+          placeholder="Enter first name" pattern="^[a-zA-Z]*$" required #firstNameInput="ngModel"
+          (blur)="firstNameInput.control.markAsTouched()">
+        <div *ngIf="firstNameInput.invalid && firstNameInput.control.touched" style="color: rgb(189, 12, 12); border-color: rgb(189, 12, 12);">
+          <div *ngIf="firstNameInput.errors?.['required']">First Name is required</div>
+          <div *ngIf="firstNameInput.errors?.['pattern']">Only letters are allowed</div>
+        </div>
+      </div>
+      <div class="form-column">
+        <div class="label-container">
+          <label for="lastName">Last Name<span style="color: red">*</span></label><br>
+        </div>
+        <input type="text" id="lastName" name="lastName" [(ngModel)]="passportDetails.lastName"
+          placeholder="Enter last name" pattern="^[a-zA-Z]*$" required #lastNameInput="ngModel"
+          (blur)="lastNameInput.control.markAsTouched()">
+        <div *ngIf="lastNameInput.invalid && lastNameInput.control.touched" style="color: rgb(189, 12, 12); border-color: rgb(189, 12, 12);">
+          <div *ngIf="lastNameInput.errors?.['required']">Last Name is required</div>
+          <div *ngIf="lastNameInput.errors?.['pattern']">Only letters are allowed</div>
+        </div>
+      </div>
+    </div>
+    
+  
+    <div class="grid-container">
+      <!-- Age and State in one row -->
+      <div class="form-column">
+        <div class="label-container">
+          <label for="age">Age<span style="color: red">*</span></label><br>
+        </div>
+        <input type="text" id="age" name="age" [(ngModel)]="passportDetails.age" placeholder="Age"
+          pattern="^(?!0{1,2}$)(?:0\d|[1-9][0-9]?|100)$" required #ageInput="ngModel"
+          (blur)="ageInput.control.markAsTouched()">
+        <div *ngIf="ageInput.touched || ageInput.dirty" style="color: rgb(189, 12, 12);">
+          <div *ngIf="ageInput.errors?.['required'] && ageInput.control.touched">Age is required</div>
+          <div *ngIf="ageInput.errors?.['pattern'] && ageInput.control.touched">Age must be between 1 and 100</div>
+        </div>
+      </div>
+      <div class="form-column">
+        <div class="label-container">
+          <label for="state">State<span style="color: red">*</span></label><br>
+        </div>
+        <select id="state" name="state" [(ngModel)]="passportDetails.state" required #stateInput="ngModel"
+  (blur)="stateInput.control.markAsTouched()">
+  <option value="" disabled selected>Select a state</option>
+  <option value="Andhra Pradesh">Andhra Pradesh</option>
+  <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+  <option value="Assam">Assam</option>
+  <option value="Bihar">Bihar</option>
+  <option value="Chhattisgarh">Chhattisgarh</option>
+  <option value="Goa">Goa</option>
+  <option value="Gujarat">Gujarat</option>
+  <option value="Haryana">Haryana</option>
+  <option value="Himachal Pradesh">Himachal Pradesh</option>
+  <option value="Jharkhand">Jharkhand</option>
+  <option value="Karnataka">Karnataka</option>
+  <option value="Kerala">Kerala</option>
+  <option value="Madhya Pradesh">Madhya Pradesh</option>
+  <option value="Maharashtra">Maharashtra</option>
+  <option value="Manipur">Manipur</option>
+  <option value="Meghalaya">Meghalaya</option>
+  <option value="Mizoram">Mizoram</option>
+  <option value="Nagaland">Nagaland</option>
+  <option value="Odisha">Odisha</option>
+  <option value="Punjab">Punjab</option>
+  <option value="Rajasthan">Rajasthan</option>
+  <option value="Sikkim">Sikkim</option>
+  <option value="Tamil Nadu">Tamil Nadu</option>
+  <option value="Telangana">Telangana</option>
+  <option value="Tripura">Tripura</option>
+  <option value="Uttar Pradesh">Uttar Pradesh</option>
+  <option value="Uttarakhand">Uttarakhand</option>
+  <option value="West Bengal">West Bengal</option>
+  <!-- Add more options for other states -->
+</select>
+
+        <div *ngIf="stateInput.invalid && stateInput.control.touched" style="color: rgb(189, 12, 12);">
+          <div *ngIf="stateInput.errors?.['required']">State is required</div>
+        </div>
+      </div>
+      
+    </div>
+    <div class="grid-container">
+      <!-- Line1 and Line2 in one row -->
+      <div class="form-column">
+        <div class="label-container">
+          <label for="line1">Address Line 1<span style="color: red">*</span></label><br>
+        </div>
+        <input type="text" id="line1" name="line1" [(ngModel)]="passportDetails.line1"
+          placeholder="Enter Address Line 1" required #line1Input="ngModel"
+          (blur)="line1Input.control.markAsTouched()">
+        <div *ngIf="line1Input.invalid && line1Input.control.touched" style="color: rgb(189, 12, 12);">
+          <div *ngIf="line1Input.errors?.['required']">Address Line 1 is required</div>
+        </div>
+      </div>
+      <div class="form-column">
+        <div class="label-container">
+          <label for="line2">Address Line 2</label><br>
+        </div>
+        <input type="text" id="line2" name="line2" [(ngModel)]="passportDetails.line2"
+          placeholder="Enter Address Line 2" #line2Input="ngModel"
+          (blur)="line2Input.control.markAsTouched()">
+      </div>
+    </div>
+    
+    <div class="grid-container">
+      <!-- City and Pincode in another row -->
+      <div class="form-column">
+        <div class="label-container">
+          <label for="city">City<span style="color: red">*</span></label><br>
+        </div>
+        <input type="text" id="city" name="city" [(ngModel)]="passportDetails.city"
+          placeholder="City" required #cityInput="ngModel"
+          (blur)="cityInput.control.markAsTouched()">
+        <div *ngIf="cityInput.invalid && cityInput.control.touched" style="color: rgb(189, 12, 12);">
+          <div *ngIf="cityInput.errors?.['required']">City is required</div>
+        </div>
+      </div>
+      <div class="form-column">
+        <div class="label-container">
+          <label for="pincode">Pincode<span style="color: red">*</span></label><br>
+        </div>
+        <input type="text" id="pincode" name="pincode" [(ngModel)]="passportDetails.pincode"
+          placeholder="Pincode" required #pincodeInput="ngModel"
+          (blur)="pincodeInput.control.markAsTouched()">
+        <div *ngIf="pincodeInput.invalid && pincodeInput.control.touched" style="color: rgb(189, 12, 12);">
+          <div *ngIf="pincodeInput.errors?.['required']">Pincode is required</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="grid-container">
+      <!-- Phone Number Field -->
+      <div class="form-column">
+        <div class="label-container">
+          <label for="phoneNumber">Phone Number<span style="color: red">*</span></label><br>
+        </div>
+        <input type="tel" id="phoneNumber" name="phoneNumber" [(ngModel)]="passportDetails.phoneNumber"
+          placeholder="Enter Phone number" pattern="[6789]\d{9}" #phoneNumberInput="ngModel"
+          (blur)="phoneNumberInput.control.markAsTouched()">
+        <div *ngIf="phoneNumberInput.invalid && phoneNumberInput.control.touched"
+          style="color: rgb(189, 12, 12);">
+          <div *ngIf="phoneNumberInput.errors?.['pattern']">Please enter a valid 10-digit phone number</div>
+        </div>
+      </div>
+    
+      <!-- Passport Number Field -->
+      <div class="form-column">
+        <div class="label-container">
+          <label for="passportNumber">Passport Number<span style="color: red">*</span></label><br>
+        </div>
+        <input type="text" id="passportNumber" name="passportNumber" [(ngModel)]="passportDetails.passportNumber"
+          placeholder="Enter passport number" pattern="[a-zA-Z0-9]{6,12}" #passportNumberInput="ngModel"
+          (blur)="passportNumberInput.control.markAsTouched()">
+        <div *ngIf="passportNumberInput.invalid && passportNumberInput.control.touched"
+          style="color: rgb(189, 12, 12);">
+          <div *ngIf="passportNumberInput.errors?.['pattern']">
+            Please enter a valid passport number (6 to 12 alpha-numeric characters)
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+  
+    <div class="grid-container">
+      <div class="form-column">
+        <div class="email-label">
+          <label for="email">Email Id<span style="color: red">*</span></label>
+        </div>
+        <div class="email-input">
+          <input type="email" id="email" name="email" [(ngModel)]="passportDetails.email" required
+            placeholder="Enter email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" #emailInput="ngModel"
+            (blur)="emailInput.control.markAsTouched()">
+        </div>
+        <div *ngIf="emailInput.invalid && emailInput.control.touched"  style="color: rgb(189, 12, 12);">
+          <div *ngIf="emailInput.errors?.['required']">Email is required</div>
+          <div *ngIf="emailInput.errors?.['email'] || emailInput.errors?.['pattern']">Enter a valid email</div>
+        </div>
+      </div>
+      
+      <div class="form-column">
+        <div class="label-container">
+            <label for="passportDocumentFile">Passport Document<span style="color: red">*</span></label>
+            <span class="file-types-info">(Allowed types: .jpg, .jpeg, .png)</span><br>
+        </div>
+        <input 
+            type="file" 
+            id="passportDocumentFile" 
+            class="passportDocumentFile-input" 
+            (change)="handleFileInput($event)" 
+            accept=".jpg, .jpeg, .png" 
+            required 
+            #passportDocumentFileInput
+        >
+        <div *ngIf="!passportDetails.passportDocumentFile && passportDocumentFileInput.value !== ''" style="color: red; border-color: red;">
+            Passport Document is required
+        </div>
+    </div>
+    
+    </div>
+      
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div>
+      
+    
+  
+    <button type="submit" class="submit-button">Submit</button>
+  
+    <div *ngIf="successMessage" class="success-message">
+      {{ successMessage }}
+    </div>
+    
+    
+   
+  </form>
+  </div>
+  
+</body>
+  
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>About Us</h3>
+      <p>Information about the Passport Seva app and its services.</p>
+    </div>
+    <div class="footer-section">
+      <h3>Help & Support</h3>
+      <p>Contact information and support options.</p>
+    </div>
+    <div class="footer-section">
+      <h3>Legal</h3>
+      <p>Legal information, terms of use, and privacy policy.</p>
+    </div>
+  </div>
+</footer>

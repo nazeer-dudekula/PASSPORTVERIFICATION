@@ -1,0 +1,62 @@
+<header class="header" fixed-top >
+  <div class="navigation-bar" >
+    <div class="time-date">
+      <p><span id="current-date">&nbsp;&nbsp;&nbsp;{{ currentDate }}</span> &nbsp;|
+      <span id="current-time">{{ currentTime }}</span></p>
+    </div>
+    
+  </div>
+
+  <div class="content-bar">
+    <div class="national-emblem">
+      &nbsp; &nbsp; <img src="assets/emblem.png" alt="National Emblem Logo">
+    </div>
+    <div class="passport-seva">
+      <h2>Passport Seva</h2>
+      <p>Passport verification & registration</p>
+    </div>
+    <div class="right-logo">
+      <img src="assets/passportSeva.png" alt="Passport Seva Logo">
+    </div>
+  </div> 
+
+</header>
+<div class="login-container">
+  <div class="login-overlay"></div>
+  <div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-6" [@fadeInOut]>
+        
+          <div class="text-center mb-4">
+            <img src="./assets/logo2.png" alt="Logo" class="logo-image">
+          </div>
+            <form #loginForm="ngForm" (ngSubmit)="checkLogin(loginForm)" novalidate>
+                
+                <div class="form-group">
+                    <label for="email">Email<span class="required">*</span></label>
+                    <input type="email" class="form-control" #email="ngModel" placeholder="Enter Email" id="email" name="email" required [(ngModel)]="loginModel.email">
+                    <div *ngIf="email.invalid && (email.dirty || email.touched)" class="text-danger">
+                        <span *ngIf="email.errors?.['required']">Email is required</span>
+                        <span *ngIf="email.errors?.['email']">Please enter a valid email</span>
+                    </div>
+                </div>
+  
+          <div class="form-group">
+            <label for="pwd">Password<span class="required">*</span></label>
+            <div class="input-group">
+              <input type="password" class="form-control" #pwd="ngModel" placeholder="Enter Password" id="pwd" name="password" required [(ngModel)]="loginModel.password">
+            </div>
+            <div *ngIf="pwd.invalid && (pwd.dirty || pwd.touched)" class="text-danger">
+              <span *ngIf="pwd.errors?.['required']">Password is required</span>
+            </div>
+          </div>
+  
+          <div class="d-flex justify-content-between align-items-center mt-4">
+            <button type="submit" class="btn btn-primary">Login</button>
+            <button type="button" class="btn btn-secondary" (click)="cancelLogin(loginForm)">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,62 @@
+/* Centering the form vertically and horizontally */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Styling for the form */
+.passport-form {
+    width: 50%; /* Adjust width as needed */
+    padding: 20px;
+    border: 2px solid rgb(224, 68, 68);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.passport-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* Style for form inputs */
+.passport-form input[type="text"],
+.passport-form input[type="number"],
+.passport-form input[type="tel"],
+.passport-form input[type="email"],
+.passport-form input[type="file"],
+.passport-form button {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.passport-form input[type="file"] {
+    margin-bottom: 20px;
+}
+
+/* Style for the submit button */
+.passport-form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.passport-form button:hover {
+    background-color: #45a049;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

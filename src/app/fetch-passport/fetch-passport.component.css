@@ -1,0 +1,487 @@
+/* Login Container Styles */
+.login-container {
+    background-image: url('../../assets/login2a.jpg');
+    background-color: rgba(255, 255, 255,0.3);
+    height:100px;
+    margin-top: -115px;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Form Styles */
+  /* Form Styles */
+form {
+
+    background-color: rgba(240, 233, 233, 0.815);
+    padding: 42px; /* Increased padding */
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 84%; /* Adjust width */
+    margin: 10px auto 0 auto; /* Center the form horizontally */
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  }
+  /* Form Input Styles */
+.form-control {
+    width: 100%;
+    padding: 22px; /* Adjust padding */
+    margin-bottom: 50px;
+    border-radius: 8px; /* Adjust border radius */
+    border: 2px solid #315e8b; /* Adjust border color and thickness */
+  }
+  
+  
+  
+  /* Form Input Styles */
+  /* Form Input Styles */
+
+  
+  
+  /* Button Styles */
+ 
+  
+  
+  
+  /* Error Message Styles */
+  .text-danger {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 5px;
+  }
+  
+  /* Passport Details Styles */
+  .passport-details {
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+  }
+  
+  .passport-details h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .passport-details p {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+  }
+  .button-group {
+    display: flex;
+    gap: 10px; /* Adjust the space between buttons */
+  }
+  
+  .btn {
+    border-radius: 8px; /* Adjust border radius */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-family: 'Arial';
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+    background-color:#005ea5;
+  }
+  
+  .btn-primary {
+    
+    padding: 14px 20px; /* Adjust padding */
+  }
+  
+  .btn-secondary {
+    background-color: gray;
+    padding: 14px 20px; /* Adjust padding */
+    width: 80px; /* Set width to 100% for space */
+  }
+  
+  .btn:hover {
+    background-color:blue;
+  }
+  .btn-secondary:hover{
+    background-color: rgba(5, 5, 5, 0.658);
+  }
+  
+  .contact-info {
+    text-align: center;
+    padding: 200px;
+  }
+  
+  .contact-card {
+    background-color: rgba(255, 255, 255, 0.534); background-color: rgba(255, 255, 255, 0.534);
+    border-radius: 10px;
+    padding: 30px;
+  }
+  
+  .info-label {
+    font-weight: bold;
+    margin-right: 8px;
+  }
+  .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    font-size: 14px;
+    margin-top: 50px;
+    }
+    
+    .footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    }
+    
+    .footer-section {
+    flex: 1;
+    padding: 0 20px;
+    }
+  
+    
+    
+
+.navigation-bar {
+  display: flex;
+  justify-content: space-between;
+  width: 80%; /* Adjust the width as per your requirement */
+  height: 25px; /* Adjust the height as per your requirement */
+  margin: 10 auto; /* To center the navigation bar horizontally */
+}
+.time-date {
+  color: white;
+  font-weight: bold;
+  padding: 50;
+  font-family: Arial, sans-serif;
+}
+
+.time-date,
+.language-selector {
+  margin: -9px;
+  
+}
+.content {
+  
+  display: flex;
+  align-items: center;
+}
+
+.national-emblem img {
+  max-width: 60px; /* Adjust the size of the emblem */
+  height: 76px;
+  margin-right: 10px;
+}
+
+.passport-seva {
+  margin-right: 90px;
+}
+
+.passport-seva h2 {
+  font-size: 24px;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+}
+
+.passport-seva p {
+  font-size: 14px;
+  margin: 2px 0;
+}
+
+.right-logo img {
+  /* Adjust the size of the Passport Seva logo */
+  height: 76px;
+  width:29% ;
+  margin-left: 650px;
+  margin-bottom: 10px;
+}
+.more-nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #630af1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 10px; /* Adjust the top margin */
+}
+/* Apply the following CSS to style the input field */
+.form-group input[type="text"] {
+    border: none;
+    font-size: 25px;
+    border-bottom: 2px solid #315e8b; /* Set the bottom border */
+    outline: none; /* Remove default focus styles */
+    padding: 5px; /* Adjust padding as needed */
+    background: transparent; /* Make the background transparent */
+    transition: border-bottom-color 0.3s; /* Smooth transition for the border color */
+  }
+  .label-passport {
+    font-size: 20px; /* Adjust the font size as needed */
+    /* Any other styles you want to apply to the label */
+}
+
+  /* Style the line when the input field is focused */
+  .form-group input[type="text"]:focus {
+    border-bottom-color: #01040a; /* Change the color on focus */
+  }
+  
+  
+.form-button {
+  background-color: #630af1;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+  background-color: #5208c9;
+}
+
+.button-link {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  padding: 10px 20px;
+}
+
+.button-link:hover {
+  background-color: #f1f1f1;
+}
+
+
+
+.nav-link {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  border-right: 1px solid #ccc;
+}
+
+.nav-link:last-child {
+  border-right: none;
+}
+.nav-link:hover {
+  background-color: rgb(71, 69, 69); /* Change background color on hover */
+  color: white; /* Change text color on hover */
+}
+.latest-news {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: rgba(207, 221, 219, 0.89);
+  border: 1px solid #ccc;
+
+justify-content: center;
+align-items: center;
+height: 10px;
+font-family: Arial, sans-serif; 
+font-weight: normal;
+
+}
+
+#img1{
+width: 100%;
+height: 100%;
+margin-top:10px; 
+border-radius: 30px;
+}
+
+#img {
+width: auto;
+max-width: 245px;
+height: auto;
+} 
+
+.dt{
+width: 90%;
+padding-top: 0px;
+
+margin: 5px 0 22px 0;
+margin-top:5px;
+
+display: inline-block;
+border: none;
+ background-color: rgb(214, 209, 231); 
+font-weight: bold;
+} 
+.logout-button {
+display: inline-block;
+}
+
+.logout-button button {
+background-color: #630af1;
+color: white;
+padding: 8px 16px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+font-size: 16px;
+font-weight: bold;
+margin-right: -17px;
+margin-top: 1px;
+
+}
+
+.logout-button button:hover {
+background-color: rgb(71, 69, 69);
+transition: background-color 0.3s ease;
+}
+/* Basic styles for the footer */
+.footer {
+background-color: #333;
+color: #fff;
+padding: 20px 0;
+font-size: 14px;
+margin-top: 50px;
+}
+
+.footer-container {
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+
+.footer-section {
+flex: 1;
+padding: 0 20px;
+}
+
+/* Additional styles based on the app design */
+/* You may need to adjust colors, fonts, and other styles to match the app's design */
+/* Style for the fixed header */
+.header {
+  /* position: fixed; */
+  background-color:white;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Adjust as needed */
+  /* Add other styles such as background-color, padding, etc. */
+}
+
+/* Style for the main content to create space for the fixed header */
+.main-content {
+  padding-top: 80px; /* Adjust this value to match the height of your header */
+  /* Add other styles as needed */
+}
+
+.navigation-bar {
+  display: flex;
+  justify-content: space-between; /* Aligns items at start and end */
+  align-items: center; /* Vertically center items */
+  background-color: #630af1; /* Background color */
+  color: white; /* Text color */
+  padding: 18px; /* Padding around content */
+  width: 100%; /* Occupies full width */
+  box-sizing: border-box; /* Includes padding in width calculation */
+}
+
+body {
+  background-color: #f0f0f0; /* Your desired screen background color */
+}
+.content-bar {
+  display: flex;
+  align-items: center;
+  background-color:white; /* White background color */
+  padding: 10px; /* Adjust overall padding */
+}
+
+.national-emblem img{
+  height: 76px; 
+  width: 60px;
+  margin-top: -15px;
+  margin-left: 0px;/* Set the height of the images */
+}
+
+.right-logo img {
+  height: 70px; 
+  width:200px;
+  margin-left: 660px;/* Set the height of the images */
+}
+
+.passport-seva {
+  margin-left: 10px; /* Adjust the spacing between elements */
+}
+.more-nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #630af1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.more-nav {
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: flex-end; /* Aligns the .more-nav to the right */
+  margin-top: 10px; /* Adjust the distance from the .content-bar */
+}
+
+.more-nav a,
+.more-nav button {
+  flex: 1; /* Equal width for all buttons */
+  text-align: center; /* Center text within buttons */
+  padding: 10px; /* Adjust padding as needed */
+  color: white;
+  text-decoration: none;
+  border: none;
+  transition: background-color 0.3s; /* Smooth transition for background color */
+  border-right: 1px solid white; /* Add a white border between buttons */
+}
+.more-nav a:last-child,
+.more-nav button:last-child {
+  border-right: none; /* Remove border from the last button */
+}
+.more-nav a:hover,
+.more-nav button:hover {
+  background-color: rgb(71, 69, 69);
+}
+
+.form-button {
+  font-size: 16px; /* Adjust the font size as needed */
+  /* Other styles */
+}
+
+.white-background {
+  background-color:#f2f2f2;
+}
+
+  /* Style for the table */
+.table-bordered {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.table-bordered th,
+.table-bordered td {
+  border: 1px solid #000;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Alternating row colors for better readability */
+.table-bordered tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Adjustments for specific columns or cells */
+
+
+.passport-details {
+  text-align: center;
+
+}
+
+.passport-details h2 {
+  text-shadow: 1px 1px 1px #000;
+  margin-bottom: 20px;
+  color: rgba(27, 27, 141, 0.966);
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+  
